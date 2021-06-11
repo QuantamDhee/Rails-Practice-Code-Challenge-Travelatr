@@ -1,0 +1,6 @@
+<h1><%= @destination.name %></h1>
+
+<% @destination.get_last.each do |d| %>
+<%= d.title %>
+</br>
+<%end%>

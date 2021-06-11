@@ -1,0 +1,8 @@
+<h1> Blogger: </h1>
+
+<h2>Name: <%= @blogger.name %></h2>
+<h2>Age: <%= @blogger.age %></h2>
+<p>Bio: <%= @blogger.bio %></p>
+
+<h2>Total Likes: <%= @blogger.posts.sum(:likes) %></h2>
+<h2>Featured Post: <%=link_to @blogger.featured_post%> </h2>
