@@ -5,4 +5,4 @@
 <p>Bio: <%= @blogger.bio %></p>
 
 <h2>Total Likes: <%= @blogger.posts.sum(:likes) %></h2>
-<h2>Featured Post: <%=link_to @blogger.featured_post%> </h2>
+<h2>Featured Post: <%=link_to @blogger.featured_post.title, post_path(@blogger.featured_post)%> </h2>

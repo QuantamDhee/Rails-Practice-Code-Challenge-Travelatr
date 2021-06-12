@@ -6,4 +6,12 @@ class Destination < ApplicationRecord
         self.posts.last(5)
     end
 
+    def featured_post
+        self.posts.max {|a, b| a.likes <=> b.likes}
+    end
+
+    def average_age
+        self.bloggers.average(:age)
+    end
+
 end

@@ -8,6 +8,5 @@ class Blogger < ApplicationRecord
 
   def featured_post
     post = self.posts.max{|a, b| a.likes <=> b.likes}
-    post.title
   end
 end
